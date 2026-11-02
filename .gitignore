@@ -1,0 +1,32 @@
+# dependencies / build output
+node_modules/
+dist/
+coverage/
+.vite/
+src/content/generated/
+
+# env & secrets
+.env
+.env.*
+!.env.example
+*.local
+
+# private or copyrighted content / audio (never commit or deploy)
+content/private/
+content/exams/private/
+content/exams/**/audio/private/
+content/imports/private/
+content/imports/pdfs/
+content/imports/pdf-text/
+content/imports/ocr/
+content/imports/cet-corpus/
+public/audio/private/
+private/
+backups/
+*.cetlab.zip
+
+# editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

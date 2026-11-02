@@ -1,0 +1,141 @@
+{
+  "$comment": "D 錨定里程碑。以剩餘天數計算而非固定日曆日，考試日變動時自動跟著移動。目標值為產品策略，可依實際進度調整。",
+  "version": "1.0.0",
+  "anchor_days": [210, 180, 150, 120, 90, 60, 30, 7],
+  "reference_dates_for_2027_06_12": {
+    "210": "2026-11-14",
+    "180": "2026-12-14",
+    "150": "2027-01-13",
+    "120": "2027-02-12",
+    "90": "2027-03-14",
+    "60": "2027-04-13",
+    "30": "2027-05-13",
+    "7": "2027-06-05"
+  },
+  "milestones": [
+    {
+      "days_before_exam": 210,
+      "label": "起步：建立節奏",
+      "targets": {
+        "cumulative_words": 300,
+        "reading_passages": 8,
+        "listening_minutes": 120,
+        "writing_pieces": 2,
+        "translation_pieces": 1,
+        "mock_exams": 0,
+        "active_days": 12,
+        "mastered_mistakes": 10
+      }
+    },
+    {
+      "days_before_exam": 180,
+      "label": "累積：基礎詞彙與輸入量",
+      "targets": {
+        "cumulative_words": 700,
+        "reading_passages": 20,
+        "listening_minutes": 300,
+        "writing_pieces": 4,
+        "translation_pieces": 2,
+        "mock_exams": 0,
+        "active_days": 30,
+        "mastered_mistakes": 25
+      }
+    },
+    {
+      "days_before_exam": 150,
+      "label": "累積：進入穩定輸入",
+      "targets": {
+        "cumulative_words": 1200,
+        "reading_passages": 35,
+        "listening_minutes": 550,
+        "writing_pieces": 6,
+        "translation_pieces": 4,
+        "mock_exams": 0,
+        "active_days": 50,
+        "mastered_mistakes": 40
+      }
+    },
+    {
+      "days_before_exam": 120,
+      "label": "轉折：開始專項與首次計時模擬",
+      "targets": {
+        "cumulative_words": 1800,
+        "reading_passages": 55,
+        "listening_minutes": 850,
+        "writing_pieces": 9,
+        "translation_pieces": 6,
+        "mock_exams": 1,
+        "active_days": 75,
+        "mastered_mistakes": 60
+      }
+    },
+    {
+      "days_before_exam": 90,
+      "label": "專項：弱項集中與每週模擬",
+      "targets": {
+        "cumulative_words": 2400,
+        "reading_passages": 80,
+        "listening_minutes": 1200,
+        "writing_pieces": 12,
+        "translation_pieces": 8,
+        "mock_exams": 3,
+        "active_days": 100,
+        "mastered_mistakes": 85
+      }
+    },
+    {
+      "days_before_exam": 60,
+      "label": "強化：錯因收斂與變式訓練",
+      "targets": {
+        "cumulative_words": 3000,
+        "reading_passages": 105,
+        "listening_minutes": 1600,
+        "writing_pieces": 15,
+        "translation_pieces": 11,
+        "mock_exams": 6,
+        "active_days": 125,
+        "mastered_mistakes": 110
+      }
+    },
+    {
+      "days_before_exam": 30,
+      "label": "實戰：完整套題節奏",
+      "targets": {
+        "cumulative_words": 3500,
+        "reading_passages": 130,
+        "listening_minutes": 2000,
+        "writing_pieces": 18,
+        "translation_pieces": 14,
+        "mock_exams": 10,
+        "active_days": 150,
+        "mastered_mistakes": 135
+      }
+    },
+    {
+      "days_before_exam": 7,
+      "label": "衝刺：只收斂、不擴張",
+      "targets": {
+        "cumulative_words": 3800,
+        "reading_passages": 150,
+        "listening_minutes": 2300,
+        "writing_pieces": 20,
+        "translation_pieces": 16,
+        "mock_exams": 14,
+        "active_days": 170,
+        "mastered_mistakes": 155
+      }
+    }
+  ],
+  "review_cadence": {
+    "weekly_report": "sunday",
+    "monthly_adjustment": "first_day_of_month",
+    "horizon_display_count": 2,
+    "note": "首頁顯示最近兩個里程碑與進度；每月 1 日依實際完成率調整下一段目標，但不改考試日。"
+  },
+  "score_estimate_policy": {
+    "visible_from_days_before_exam": 120,
+    "min_mock_attempts": 2,
+    "label": "預估分數區間（非官方成績）"
+  },
+  "minimum_viable_day_minutes": 5
+}

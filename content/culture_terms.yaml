@@ -1,0 +1,309 @@
+# CET-Lab 翻譯文化詞術語表
+# 用途：翻譯批改時，檢查原文出現的中文文化詞是否被正確譯出。
+# 注意：英文譯法以常見官方/媒體用法為參考，非唯一正確答案；批改時以「可接受譯法」為原則。
+# aliases 同時收錄簡體與常見簡稱，方便比對原文。
+
+version: "1.0.0"
+status: reference
+last_reviewed_at: "2026-11-01"
+
+terms:
+  - zh: "改革開放"
+    en: "reform and opening-up"
+    aliases: ["改革开放"]
+    category: "policy"
+
+  - zh: "非物質文化遺產"
+    en: "intangible cultural heritage"
+    aliases: ["非物质文化遗产", "非遺", "非遗"]
+    category: "culture"
+
+  - zh: "鄉村振興"
+    en: "rural revitalization"
+    aliases: ["乡村振兴"]
+    category: "policy"
+
+  - zh: "一帶一路"
+    en: "Belt and Road Initiative"
+    aliases: ["一带一路"]
+    category: "policy"
+
+  - zh: "共同富裕"
+    en: "common prosperity"
+    aliases: ["共同富裕"]
+    category: "policy"
+
+  - zh: "碳中和"
+    en: "carbon neutrality"
+    aliases: ["碳中和"]
+    category: "environment"
+
+  - zh: "碳達峰"
+    en: "peak carbon emissions"
+    aliases: ["碳达峰"]
+    category: "environment"
+
+  - zh: "新能源"
+    en: "new energy"
+    aliases: ["新能源"]
+    category: "environment"
+
+  - zh: "可持續發展"
+    en: "sustainable development"
+    aliases: ["可持续发展"]
+    category: "environment"
+
+  - zh: "綠色發展"
+    en: "green development"
+    aliases: ["绿色发展"]
+    category: "environment"
+
+  - zh: "生態文明"
+    en: "ecological civilization"
+    aliases: ["生态文明"]
+    category: "environment"
+
+  - zh: "循環經濟"
+    en: "circular economy"
+    aliases: ["循环经济"]
+    category: "economy"
+
+  - zh: "人工智慧"
+    en: "artificial intelligence"
+    aliases: ["人工智能", "AI"]
+    category: "technology"
+
+  - zh: "生成式人工智慧"
+    en: "generative artificial intelligence"
+    aliases: ["生成式人工智能", "生成式AI", "生成式 AI"]
+    category: "technology"
+
+  - zh: "大數據"
+    en: "big data"
+    aliases: ["大数据"]
+    category: "technology"
+
+  - zh: "雲計算"
+    en: "cloud computing"
+    aliases: ["云计算"]
+    category: "technology"
+
+  - zh: "物聯網"
+    en: "Internet of Things"
+    aliases: ["物联网"]
+    category: "technology"
+
+  - zh: "區塊鏈"
+    en: "blockchain"
+    aliases: ["区块链"]
+    category: "technology"
+
+  - zh: "數位經濟"
+    en: "digital economy"
+    aliases: ["数字经济"]
+    category: "economy"
+
+  - zh: "平台經濟"
+    en: "platform economy"
+    aliases: ["平台经济"]
+    category: "economy"
+
+  - zh: "遠距工作"
+    en: "remote work"
+    aliases: ["远程工作", "远程办公", "遠端工作"]
+    category: "society"
+
+  - zh: "共享經濟"
+    en: "sharing economy"
+    aliases: ["共享经济"]
+    category: "economy"
+
+  - zh: "心理健康"
+    en: "mental health"
+    aliases: ["心理健康"]
+    category: "health"
+
+  - zh: "人口老齡化"
+    en: "population aging"
+    aliases: ["人口老龄化"]
+    category: "society"
+
+  - zh: "城鎮化"
+    en: "urbanization"
+    aliases: ["城镇化"]
+    category: "society"
+
+  - zh: "社會保障"
+    en: "social security"
+    aliases: ["社会保障"]
+    category: "society"
+
+  - zh: "義務教育"
+    en: "compulsory education"
+    aliases: ["义务教育"]
+    category: "education"
+
+  - zh: "高等教育"
+    en: "higher education"
+    aliases: ["高等教育"]
+    category: "education"
+
+  - zh: "職業教育"
+    en: "vocational education"
+    aliases: ["职业教育"]
+    category: "education"
+
+  - zh: "傳統文化"
+    en: "traditional culture"
+    aliases: ["传统文化"]
+    category: "culture"
+
+  - zh: "文化自信"
+    en: "cultural confidence"
+    aliases: ["文化自信"]
+    category: "culture"
+
+  - zh: "文化遺產"
+    en: "cultural heritage"
+    aliases: ["文化遗产"]
+    category: "culture"
+
+  - zh: "春節"
+    en: "Spring Festival"
+    aliases: ["春节", "Chinese New Year"]
+    category: "culture"
+
+  - zh: "中秋節"
+    en: "Mid-Autumn Festival"
+    aliases: ["中秋节"]
+    category: "culture"
+
+  - zh: "端午節"
+    en: "Dragon Boat Festival"
+    aliases: ["端午节"]
+    category: "culture"
+
+  - zh: "書法"
+    en: "calligraphy"
+    aliases: ["书法"]
+    category: "culture"
+
+  - zh: "京劇"
+    en: "Peking Opera"
+    aliases: ["京剧"]
+    category: "culture"
+
+  - zh: "絲綢之路"
+    en: "Silk Road"
+    aliases: ["丝绸之路"]
+    category: "culture"
+
+  - zh: "長城"
+    en: "Great Wall"
+    aliases: ["长城"]
+    category: "culture"
+
+  - zh: "故宮"
+    en: "Forbidden City"
+    aliases: ["故宫", "Palace Museum"]
+    category: "culture"
+
+  - zh: "中醫藥"
+    en: "traditional Chinese medicine"
+    aliases: ["中医药", "中醫", "中医"]
+    category: "health"
+
+  - zh: "太極拳"
+    en: "tai chi"
+    aliases: ["太极拳"]
+    category: "culture"
+
+  - zh: "行動支付"
+    en: "mobile payment"
+    aliases: ["移动支付"]
+    category: "technology"
+
+  - zh: "高鐵"
+    en: "high-speed rail"
+    aliases: ["高铁"]
+    category: "infrastructure"
+
+  - zh: "太空站"
+    en: "space station"
+    aliases: ["空间站", "太空站"]
+    category: "technology"
+
+  - zh: "探月工程"
+    en: "lunar exploration program"
+    aliases: ["探月工程"]
+    category: "technology"
+
+  - zh: "脫貧攻堅"
+    en: "poverty alleviation"
+    aliases: ["脱贫攻坚"]
+    category: "policy"
+
+  - zh: "小康社會"
+    en: "moderately prosperous society"
+    aliases: ["小康社会"]
+    category: "policy"
+
+  - zh: "智慧城市"
+    en: "smart city"
+    aliases: ["智慧城市"]
+    category: "technology"
+
+  - zh: "碳排放"
+    en: "carbon emissions"
+    aliases: ["碳排放"]
+    category: "environment"
+
+  - zh: "生物多樣性"
+    en: "biodiversity"
+    aliases: ["生物多样性"]
+    category: "environment"
+
+  - zh: "氣候變遷"
+    en: "climate change"
+    aliases: ["气候变化", "氣候變化"]
+    category: "environment"
+
+  - zh: "垃圾分類"
+    en: "waste sorting"
+    aliases: ["垃圾分类"]
+    category: "environment"
+
+  - zh: "低碳生活"
+    en: "low-carbon lifestyle"
+    aliases: ["低碳生活"]
+    category: "environment"
+
+  - zh: "終身學習"
+    en: "lifelong learning"
+    aliases: ["终身学习"]
+    category: "education"
+
+  - zh: "線上教育"
+    en: "online education"
+    aliases: ["在线教育"]
+    category: "education"
+
+  - zh: "銀髮經濟"
+    en: "silver economy"
+    aliases: ["银发经济"]
+    category: "economy"
+
+  - zh: "智慧財產權"
+    en: "intellectual property"
+    aliases: ["知识产权"]
+    category: "policy"
+
+  - zh: "市場經濟"
+    en: "market economy"
+    aliases: ["市场经济"]
+    category: "economy"
+
+  - zh: "全球化"
+    en: "globalization"
+    aliases: ["全球化"]
+    category: "economy"

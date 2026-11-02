@@ -1,0 +1,14 @@
+[
+  {
+    "key": "l1",
+    "label": "News Report 1",
+    "section": "A",
+    "questions": [1, 2]
+  },
+  {
+    "key": "l2",
+    "label": "Conversation 1",
+    "section": "B",
+    "questions": [3, 4]
+  }
+]

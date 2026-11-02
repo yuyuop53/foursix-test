@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", ui-sans-serif,
+    system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif: "Iowan Old Style", "Palatino Linotype", Georgia, "Noto Serif TC",
+    "Songti TC", serif;
+
+  --color-surface: #0b0f14;
+  --color-panel: #111820;
+  --color-panel-2: #16212c;
+  --color-line: #243140;
+  --color-line-soft: #1a2531;
+  --color-ink: #e6edf3;
+  --color-muted: #8b9bb0;
+  --color-faint: #5f7186;
+  --color-accent: #5eead4;
+  --color-accent-2: #38bdf8;
+  --color-danger: #fb7185;
+  --color-warn: #fbbf24;
+  --color-ok: #34d399;
+  --color-violet: #a78bfa;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background:
+      radial-gradient(1200px 600px at 82% -10%, rgba(56, 189, 248, 0.09), transparent 60%),
+      radial-gradient(900px 520px at 8% -6%, rgba(94, 234, 212, 0.06), transparent 55%),
+      var(--color-surface);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: rgba(94, 234, 212, 0.28);
+    color: #ffffff;
+  }
+
+  button,
+  a,
+  input,
+  textarea,
+  select {
+    outline: none;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #2a3a4c transparent;
+  }
+
+  *::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: #2a3a4c;
+    border-radius: 999px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+}
+
+@layer components {
+  .reading-body {
+    min-width: 0;
+    font-family: var(--font-serif);
+    font-size: 1.075rem;
+    line-height: 1.95;
+    color: #dbe6ef;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    hyphens: auto;
+  }
+
+  .reading-body p {
+    margin: 0 0 1.15rem;
+    overflow-wrap: anywhere;
+  }
+
+  .question-text,
+  .option-text {
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  .reading-body p:last-child {
+    margin-bottom: 0;
+  }
+
+  .reading-body ::selection {
+    background: rgba(94, 234, 212, 0.3);
+  }
+
+  .hairline {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-rise {
+  animation: rise 0.35s ease-out both;
+}
+
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 2.4s ease-in-out infinite;
+}

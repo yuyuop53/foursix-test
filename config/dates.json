@@ -1,0 +1,26 @@
+{
+  "$comment": "CET-Lab 全域唯一時間源。任何程式碼不得寫死日期，一律讀取本檔。所有日期皆為預估值，非教育部考試中心官方公告。",
+  "timezone": "Asia/Shanghai",
+  "estimated": true,
+  "verified_against_official": false,
+  "last_reviewed_at": "2026-11-01",
+  "plan_start_date": "2026-11-01",
+  "review_reminder_months": [1, 2, 7, 8],
+  "official_sources": [
+    "http://cet.neea.edu.cn",
+    "http://cet-bm.neea.edu.cn"
+  ],
+  "exam_date": "2027-06-12",
+  "registration_start": "2027-03-10",
+  "registration_end": "2027-03-17",
+  "backup_exam_date": "2027-12-11",
+  "backup_registration_start": "2027-09-10",
+  "backup_registration_end": "2027-09-17",
+  "notes": {
+    "plan_start_date": "備考計畫起算日，用於首頁倒數進度條（已過天數／總天數）。",
+    "exam_date": "依歷年 6 月場次規律預估，約 223 天後（以 2026-11-01 計）。",
+    "registration_end": "含當日 23:59:59，以 Asia/Shanghai 時區計算。",
+    "backup": "若錯過或未報名成功，系統自動建議此場次並重算倒數，原日期保留於歷史。",
+    "verification": "每年 1–2 月與 7–8 月核對官方公告；更新本檔即可全站同步。"
+  }
+}

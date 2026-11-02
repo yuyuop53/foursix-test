@@ -1,0 +1,15 @@
+1
+00:00:01,000 --> 00:00:04,000
+Volunteers helped clean the river last weekend.
+
+2
+00:00:05,000 --> 00:00:09,000
+They wanted to protect the environment for the next generation.
+
+3
+00:00:11,000 --> 00:00:14,000
+I need to change our meeting time tomorrow.
+
+4
+00:00:15,000 --> 00:00:19,000
+I will send you an email with the new schedule.

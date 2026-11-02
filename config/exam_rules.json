@@ -1,0 +1,258 @@
+{
+  "$comment": "考情與產品規則參數。所有數值皆為預估或產品策略，非教育部考試中心官方大綱；官方規則變動時只改本檔，不改程式碼。",
+  "version": "1.0.0",
+  "status": "estimated",
+  "last_reviewed_at": "2026-11-01",
+  "disclaimer": "語速、口音比例、題型比例、批改門檻與字數要求主要來自公開培訓分析與本專案產品策略，並非官方大綱。UI 必須標註「預估」。",
+  "phases": {
+    "evaluation": "依剩餘天數 D 由上而下取第一個符合的規則；D 以 Asia/Shanghai 日曆日計算。",
+    "rules": [
+      {
+        "id": "foundation",
+        "label": "基礎積累期",
+        "min_days_exclusive": 120,
+        "ui": { "show_score_estimate": false, "show_only_cumulative": true, "hide_full_mock": true }
+      },
+      {
+        "id": "intensive",
+        "label": "專項強化期",
+        "min_days_exclusive": 30,
+        "max_days_inclusive": 120,
+        "ui": { "show_score_estimate": true, "weekly_timed_mock": true }
+      },
+      {
+        "id": "mock",
+        "label": "模擬實戰期",
+        "min_days_exclusive": 7,
+        "max_days_inclusive": 30,
+        "ui": { "show_score_estimate": true, "exam_mode": true, "hide_explanations": true, "allow_pause": false, "mock_every_n_days": 2 }
+      },
+      {
+        "id": "sprint",
+        "label": "衝刺收斂期",
+        "min_days_inclusive": 0,
+        "max_days_inclusive": 7,
+        "ui": { "show_score_estimate": true, "new_content": false, "focus": ["mistake_review", "core_words", "personal_corpus"] }
+      },
+      {
+        "id": "archived",
+        "label": "已封存",
+        "max_days_inclusive": -1,
+        "ui": { "read_only": true, "show_congratulations": true }
+      }
+    ]
+  },
+  "exam_format": {
+    "total_minutes": 125,
+    "sections": [
+      { "id": "writing", "label": "寫作", "minutes": 30 },
+      { "id": "listening", "label": "聽力", "minutes": 25 },
+      { "id": "reading", "label": "閱讀", "minutes": 40 },
+      { "id": "translation", "label": "翻譯", "minutes": 30 }
+    ],
+    "note": "板塊時間為常見參考配置；若官方調整，更新本節即可。"
+  },
+  "listening": {
+    "cet4_wpm": { "min": 140, "max": 150 },
+    "lecture_wpm": { "min": 160, "max": 180 },
+    "accent_mix": { "us": 0.7, "british_or_australian": 0.3 },
+    "playback_speeds": [1.0, 1.1, 1.2, 1.25, 1.3, 1.5],
+    "comfort_progression": [1.0, 1.1, 1.2],
+    "question_type_targets": {
+      "detail": 0.35,
+      "inference": 0.3,
+      "attitude": 0.15,
+      "main_idea": 0.1,
+      "vocabulary_in_context": 0.1
+    },
+    "dictation": {
+      "max_replays": 3,
+      "show_chinese_by_default": false
+    }
+  },
+  "reading": {
+    "passage_time_guide_minutes": 8,
+    "question_type_targets": {
+      "detail": 0.35,
+      "inference": 0.3,
+      "attitude": 0.15,
+      "main_idea": 0.1,
+      "vocabulary_in_context": 0.1
+    },
+    "hot_topics": [
+      { "id": "ai_ethics", "label": "AI 倫理" },
+      { "id": "climate_change", "label": "氣候變遷" },
+      { "id": "remote_work", "label": "遠距工作" },
+      { "id": "mental_health", "label": "心理健康" },
+      { "id": "new_energy", "label": "新能源" },
+      { "id": "tech_ethics", "label": "科技倫理" },
+      { "id": "aging_population", "label": "人口老齡化" },
+      { "id": "urbanization", "label": "城鎮化" },
+      { "id": "digital_economy", "label": "數位經濟" },
+      { "id": "biodiversity", "label": "生物多樣性" },
+      { "id": "education_technology", "label": "教育科技" },
+      { "id": "public_health", "label": "公共衛生" },
+      { "id": "unclassified", "label": "未分類（待校對）" }
+    ]
+  },
+  "writing": {
+    "word_count": { "min": 120, "max": 180 },
+    "word_count_penalty": "不足只警告並提示扣分風險，不自動歸零。",
+    "template_blacklist": [
+      "with the development of society",
+      "with the rapid development of society",
+      "with the development of science and technology",
+      "with the rapid development of science and technology",
+      "every coin has two sides",
+      "in a word",
+      "there are many reasons",
+      "there are many reasons why",
+      "as we all know",
+      "it is widely acknowledged that",
+      "it goes without saying that",
+      "last but not least",
+      "all in all",
+      "to sum up",
+      "in conclusion",
+      "as far as i am concerned",
+      "it is universally acknowledged that",
+      "in recent years, more and more people"
+    ],
+    "template_patterns": [
+      { "id": "with_development_of", "regex": "\\bwith the (?:rapid )?development of\\b", "weight": 0.9 },
+      { "id": "there_are_many_reasons", "regex": "\\bthere are (?:many|several|various) reasons (?:why|for)\\b", "weight": 0.9 },
+      { "id": "every_coin", "regex": "\\bevery coin has (?:two|both) sides\\b", "weight": 1.0 },
+      { "id": "first_second_finally", "regex": "\\b(?:first(?:ly)?|second(?:ly)?|third(?:ly)?|finally|lastly)\\b", "weight": 0.5 },
+      { "id": "on_the_one_hand", "regex": "\\bon the one hand\\b[\\s\\S]{0,120}\\bon the other hand\\b", "weight": 0.6 }
+    ],
+    "connective_terms": [
+      "first", "firstly", "second", "secondly", "third", "thirdly",
+      "finally", "lastly", "in conclusion", "to sum up", "all in all",
+      "moreover", "furthermore", "in addition", "besides", "however"
+    ],
+    "template_thresholds": {
+      "low_below": 0.1,
+      "moderate_max": 0.2,
+      "high_above": 0.2,
+      "language_dimension_cap_when_high": 3,
+      "high_confidence_exact_hits_cap_trigger": 3
+    },
+    "connective_penalty": {
+      "metric": "per_100_words",
+      "p75": 4.0,
+      "p95": 8.0,
+      "max_penalty": 0.15
+    },
+    "rewrite_modes": [
+      { "id": "A", "label": "保守穩健版", "goal": "保留原意、降低模板比、語法正確" },
+      { "id": "B", "label": "高分地道版", "goal": "提升搭配與邏輯，使用個人語料庫句型" }
+    ],
+    "allowlist_max_words": 12,
+    "personal_corpus": {
+      "enabled": true,
+      "min_quality_score": 3,
+      "max_examples_per_rewrite": 3
+    }
+  },
+  "translation": {
+    "source_char_range": { "min": 140, "max": 160 },
+    "culture_terms_file": "../content/culture_terms.yaml",
+    "fuzzy_edit_distance_ratio": 0.2,
+    "fuzzy_min_distance": 1,
+    "scoring": { "exact": 2, "partial": 1, "wrong": 0 }
+  },
+  "srs": {
+    "ladder_days": [1, 2, 4, 7, 15, 30, 60],
+    "daily_new_words": 20,
+    "daily_review_cap": 60,
+    "baseline_window_days": 14,
+    "baseline_floor": 20,
+    "backlog_trigger_days": 3,
+    "backlog_spread_days": 3,
+    "backlog_allocation": [0.45, 0.35, 0.2],
+    "backlog_overload_factor": 1.2,
+    "pause_new_words_backlog_factor": 2.0,
+    "pause_new_words_days_after_backlog": 3,
+    "stop_new_words_days_before_exam": 14,
+    "core_only_days_before_exam": 3,
+    "core_frequency_rank_max": 2000,
+    "core_lapses_min": 2,
+    "clamp_days_before_exam": 1,
+    "mastery": { "correct_count": 2, "distinct_variants": 2 }
+  },
+  "grading": {
+    "max_score_15": 15,
+    "dimensions": [
+      { "id": "content", "label": "內容", "max": 5 },
+      { "id": "logic", "label": "邏輯連貫", "max": 5 },
+      { "id": "language", "label": "語言表達", "max": 5 }
+    ],
+    "band_hints": [
+      { "min": 13, "label": "13–15 分檔" },
+      { "min": 10, "label": "10–12 分檔" },
+      { "min": 7, "label": "7–9 分檔" },
+      { "min": 4, "label": "4–6 分檔" },
+      { "min": 0, "label": "0–3 分檔" }
+    ],
+    "require_citations": true,
+    "require_template_spans": true,
+    "issue_codes": [
+      { "id": "subject_verb_agreement", "label": "主謂一致" },
+      { "id": "tense", "label": "時態" },
+      { "id": "article", "label": "冠詞" },
+      { "id": "preposition", "label": "介系詞" },
+      { "id": "clause", "label": "從句" },
+      { "id": "run_on", "label": "流水句" },
+      { "id": "chinglish", "label": "中式英語" },
+      { "id": "collocation", "label": "搭配" },
+      { "id": "word_form", "label": "詞形" },
+      { "id": "punctuation", "label": "標點" }
+    ],
+    "rule_engine": {
+      "id": "rule",
+      "version": "1.0.0",
+      "confidence": 0.6,
+      "n_gram_size": 4,
+      "jaccard_high": 0.65,
+      "jaccard_mid_low": 0.45
+    },
+    "ai": {
+      "enabled": false,
+      "endpoint": null,
+      "monthly_token_budget": null,
+      "fallback": "rule",
+      "providers": ["claude", "openai_compatible", "ollama"],
+      "api_key_location": "server_only"
+    }
+  },
+  "taxonomy": {
+    "sections": ["listening", "reading", "writing", "translation", "speaking"],
+    "knowledge_tags": [
+      "main_idea", "detail", "inference", "attitude", "vocabulary_in_context",
+      "text_structure", "signposting", "paraphrase", "listening_detail",
+      "listening_inference", "listening_attitude", "logic_gap", "cohesion"
+    ],
+    "error_causes": [
+      { "id": "lexical", "label": "詞彙" },
+      { "id": "grammar", "label": "語法" },
+      { "id": "locating", "label": "定位錯誤" },
+      { "id": "inference", "label": "推理失誤" },
+      { "id": "time_pressure", "label": "時間不足" },
+      { "id": "carelessness", "label": "粗心" }
+    ],
+    "difficulty_range": { "min": 1, "max": 5 }
+  },
+  "registration": {
+    "prep_lead_days": 30,
+    "daily_reminder_lead_days": 7,
+    "full_screen_on_open_day": true,
+    "checklist": [
+      { "id": "eligibility", "label": "學籍／報考資格確認" },
+      { "id": "neea_account", "label": "CET 全國報名系統帳號（cet-bm.neea.edu.cn）" },
+      { "id": "id_photo", "label": "電子證件照" },
+      { "id": "school_window", "label": "學校開放時段" },
+      { "id": "payment", "label": "繳費方式" },
+      { "id": "calendar", "label": "行事曆提醒" }
+    ]
+  }
+}
